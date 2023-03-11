@@ -11,7 +11,7 @@ namespace LogicalProgram
             while (flag)
             {
                 Console.WriteLine("Choose an option to execute \n1.Fibonacci Series \n2.Perfect Number \n3.Prime Number \n4.Reverse a Number \n5.Day of Week" +
-                    "\n6.Stop Watch \n7.Temperature Conversion \n8.Exit");
+                    "\n6.Stop Watch \n7.Temperature Conversion \n8.Monthly Payment \n9.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -62,8 +62,18 @@ namespace LogicalProgram
                         t.TempConv(temp, opt);
                         break;
                     case 8:
+                        Console.WriteLine("Enter Principal Loan Amount");
+                        double P = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Interest Rate");
+                        double R = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Year");
+                        double Y = Convert.ToInt32(Console.ReadLine());
+                        MonthlyPayment monthlyPayment = new MonthlyPayment();
+                        monthlyPayment.Payment(P, Y, R);
+                        break;
+                    case 9:
                         flag = false;
-                            break;
+                        break;
                 }
             }
         }
