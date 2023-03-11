@@ -1,5 +1,5 @@
 ﻿using System;
-namespace LogicalPrograms
+namespace LogicalProgram
 {
     public class MonthlyPayment
     {
@@ -11,4 +11,4 @@ namespace LogicalPrograms
             Console.WriteLine("Monthly Payment: " + payment);
         }
     }
-}
+} 
