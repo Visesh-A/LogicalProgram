@@ -11,7 +11,7 @@ namespace LogicalProgram
             while (flag)
             {
                 Console.WriteLine("Choose an option to execute \n1.Fibonacci Series \n2.Perfect Number \n3.Prime Number \n4.Reverse a Number \n5.Day of Week" +
-                    "\n6.Stop Watch \n7.Temperature Conversion \n8.Monthly Payment \n9.Coupon Number \n10.Exit");
+                    "\n6.Stop Watch \n7.Temperature Conversion \n8.Monthly Payment \n9.Coupon Number \n10.Vending Machine \n11.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -78,6 +78,12 @@ namespace LogicalProgram
                         couponNumbers.DistinctCoupon(b);
                         break;
                     case 10:
+                        Console.WriteLine("Enter amount");
+                        int amount = Convert.ToInt32(Console.ReadLine());
+                        VendingMachine vendingMachine = new VendingMachine();
+                        vendingMachine.GetChange(amount);
+                        break;
+                    case 11:
                         flag = false;
                         break;
                 }
