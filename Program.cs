@@ -11,7 +11,7 @@ namespace LogicalProgram
             while (flag)
             {
                 Console.WriteLine("Choose an option to execute \n1.Fibonacci Series \n2.Perfect Number \n3.Prime Number \n4.Reverse a Number \n5.Day of Week" +
-                    "\n6.Stop Watch \n7.Exit");
+                    "\n6.Stop Watch \n7.Temperature Conversion \n8.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -54,8 +54,16 @@ namespace LogicalProgram
                         stopWatch.Run();
                         break;
                     case 7:
-                        flag = false;
+                        Console.WriteLine("Enter Temperature");
+                        int temp = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Choose option to perform \n1.Celcius to Fahrenheit   2.Fahrenheit to Celcius");
+                        int opt = Convert.ToInt32(Console.ReadLine());
+                        TemperatureConversion t = new TemperatureConversion();
+                        t.TempConv(temp, opt);
                         break;
+                    case 8:
+                        flag = false;
+                            break;
                 }
             }
         }
